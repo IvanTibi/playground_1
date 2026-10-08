@@ -9,9 +9,9 @@ app = FastAPI(title="Fortune RestApi Service")
 def health():
     return {"status": "ok"}
 
-@app.get("/print")
-def print():
-    return Fortune()._print_all_fortunes()
+#@app.get("/print")
+#def print():
+#    return Fortune()._print_all_fortunes()
 
 @app.get("/fortune", response_class=PlainTextResponse)
 def get_fortune():
