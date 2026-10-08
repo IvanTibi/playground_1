@@ -32,7 +32,7 @@ jobs:
           pytest
 
   docker-build:
-    needs: test
+    needs: pytest
     runs-on: ubuntu-latest
 
     steps:
