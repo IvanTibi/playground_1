@@ -17,6 +17,11 @@ dependencies = [
     "uvicorn[standard]"
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
 [project.urls]
 repository = "https://codeberg.org/jamesansley/fortune"
 
