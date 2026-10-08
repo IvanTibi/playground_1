@@ -77,4 +77,5 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           snyk container test fortune:${{ github.sha }} \
-            --severity-threshold=high                      
+            --file=docker/Dockerfile.debian \
+            --severity-threshold=high
