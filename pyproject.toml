@@ -3,14 +3,19 @@ requires = ["setuptools>=65.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fortune-python"
-version = "1.1.2"
-description = "A Fortune clone in Python"
+name = "fortune-technical-interwiew-task"
+version = "0.0.1"
+description = "REST API "
 readme = "README.md"
 requires-python = ">=3.8"
 license = "Apache-2.0"
 keywords = ["fortune"]
 authors = [{ name = "James Finnie-Ansley" }]
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]"
+]
 
 [project.urls]
 repository = "https://codeberg.org/jamesansley/fortune"
