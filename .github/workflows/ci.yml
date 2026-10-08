@@ -58,3 +58,16 @@ jobs:
           docker build \
             -f docker/Dockerfile.debian \
             -t fortune:${{ github.sha }} .
+
+      - name: Install Snyk CLI
+        run: |
+          curl --compressed https://downloads.snyk.io/cli/stable/snyk-linux -o snyk
+          chmod +x snyk
+          sudo mv snyk /usr/local/bin/snyk
+
+      - name: Authenticate with Snyk
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          snyk auth "$SNYK_TOKEN"
+          snyk --version            
