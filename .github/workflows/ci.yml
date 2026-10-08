@@ -70,4 +70,11 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           snyk auth "$SNYK_TOKEN"
-          snyk --version            
+          snyk --version
+
+      - name: Scan Docker image with Snyk
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          snyk container test fortune:${{ github.sha }} \
+            --severity-threshold=high                      
