@@ -11,3 +11,11 @@ build/
 
 .env
 .env.*
+# Windows malware lab: secrets and generated artifacts
+/task3-windows-vm/scripts/Autounattend.xml
+/task3-windows-vm/*.auto.pkrvars.hcl
+/task3-windows-vm/packer/*.auto.pkrvars.hcl
+/task3-windows-vm/output-*/
+/task3-windows-vm/**/*.vdi
+/task3-windows-vm/**/*.vbox
+/task3-windows-vm/**/*.vbox-prev
